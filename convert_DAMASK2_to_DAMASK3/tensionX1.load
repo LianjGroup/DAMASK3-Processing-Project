@@ -1,0 +1,5 @@
+fdot 4.75e-5 0 0  0 5.25e-5 0   0 0 *  stress  * * *   * * *   * * 0  time 60  incs 80 freq 4
+fdot 4.75e-5 0 0  0 5.25e-5 0   0 0 *  stress  * * *   * * *   * * 0  time 1140  incs 80 freq 4
+fdot -4.75e-5 0 0  0 -5.25e-5 0   0 0 *  stress  * * *   * * *   * * 0  time 44  incs 80 freq 4
+fdot * 0 0  0 1e-4 0   0 0 *  stress  0 * *   * * *   * * 0  time 78  incs 80 freq 4
+fdot * 0 0  0 1e-4 0   0 0 *  stress  0 * *   * * *   * * 0  time 1518  incs 80 freq 4

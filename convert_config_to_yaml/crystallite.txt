@@ -1,6 +1,0 @@
-[all]
-(output) phase
-(output) texture
-(output) eulerangles        # orientation as Bunge triple in degree
-(output) f             # 9
-(output) p             # 9
