@@ -1,0 +1,21 @@
+
+Download
+========
+
+wget https://damask.mpie.de/download/damask-3.0.0-alpha6.tar.xz
+wget https://damask.mpie.de/download/damask-3.0.0-alpha6.tar.xz.sha256
+sha256sum -c damask-3.0.0-alpha6.tar.xz.sha256
+tar -xf damask-3.0.0-alpha6.tar.xz
+
+Compilation
+===========
+
+. damask_env.txt
+
+cmake -S damask-3.0.0-alpha6 -B build-grid -DDAMASK_SOLVER=grid -DCMAKE_INSTALL_PREFIX=/scratch/project_2004956/damask3/damask-install
+
+cmake --build build-grid --target install
+
+cmake -S damask-3.0.0-alpha6 -B build-mesh -DDAMASK_SOLVER=mesh -DCMAKE_INSTALL_PREFIX=/scratch/project_2004956/damask3/damask-install
+
+cmake --build build-mesh --target install

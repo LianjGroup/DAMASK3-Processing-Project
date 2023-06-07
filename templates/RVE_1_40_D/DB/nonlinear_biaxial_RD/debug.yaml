@@ -1,0 +1,26 @@
+phase:
+  - basic
+  - extensive
+  - selective
+
+materialpoint:
+  - basic
+  - extensive
+  - selective
+
+element: 1
+
+integrationpoint: 1
+
+constituent: 1
+
+mesh:
+  - PETSc
+
+grid:
+  - basic
+  - rotation
+  - PETSc
+
+Marc:
+  - basic

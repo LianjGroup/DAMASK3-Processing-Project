@@ -1,0 +1,15 @@
+module purge
+module load gcc/11.3.0
+module load openmpi/4.1.4
+module load hdf5/1.12.2-mpi
+module load fftw/3.3.10-mpi
+module load python-data/3.10-22.09
+
+# PETSC 3.16
+export PETSC_DIR=USERPETSCDIR
+export PETSC_FC_INCLUDES=$PETSC_DIR/include
+export LD_LIBRARY_PATH=$PETSC_DIR/lib:$LD_LIBRARY_PATH
+
+export DAMASK_ROOT=XXYYZZ/damask-3.0.0-alpha6
+
+export PATH=XXYYZZ/inst-3.0/bin:$PATH

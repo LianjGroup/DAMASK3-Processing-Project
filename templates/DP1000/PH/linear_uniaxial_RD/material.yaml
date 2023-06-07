@@ -1,0 +1,82 @@
+homogenization:
+  SX:
+    N_constituents: 1
+    mechanical: {type: pass}
+
+phase:
+  BCC_Ferrite:
+    lattice: cI
+    mechanical:
+      output: [F, P, F_e]
+      elastic: {type: Hooke, C_11: 230.1e9, C_12: 134.6e9, C_44: 116.6e9}
+      plastic:
+        type: phenopowerlaw
+        output: [rho_dip, rho_mob]
+        N_sl: [12, 12]
+        N_twin: [0, 0]
+        dot_gamma_0_sl: 0.001
+        dot_gamma_0_tw: 0.001
+        n_sl: 20
+        n_tw: 20
+        a_sl: 1.3
+        xi_0_sl: [300e6, 300e6]
+        xi_0_tw: 0
+        xi_inf_sl: [375e6, 375e6]
+        h_0_sl-sl: 3500e6
+        h_0_sl-tw: 0
+        h_0_tw-sl: 0
+        h_0_tw-tw: 0
+        h_sl-sl: [1, 1, 1.4, 1.4, 1.4, 1.4, 1.4]
+        h_sl-tw: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        h_tw-sl: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        h_tw-tw: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        atol_xi: 1.0
+        f_sat_sl_tw: 0 !< push-up factor for slip saturation due to twinning
+        c_1: 0
+        c_2: 0
+        c_3: 0
+        c_4: 0
+  BCC_Martensite:
+    lattice: cI
+    mechanical:
+      output: [F, P, F_e]
+      elastic: {type: Hooke, C_11: 417.4e9, C_12: 242.4e9, C_44: 211.1e9}
+      plastic:
+        type: phenopowerlaw
+        output: [rho_dip, rho_mob]
+        N_sl: [12, 12]
+        N_twin: [0, 0]
+        dot_gamma_0_sl: 0.001
+        dot_gamma_0_tw: 0.001
+        n_sl: 20
+        n_tw: 20
+        a_sl: 0.8
+        xi_0_sl: [475e6, 475e6]
+        xi_0_tw: 31
+        xi_inf_sl: [675e6, 675e6]
+        h_0_sl-sl: 11000e6
+        h_0_sl-tw: 0
+        h_0_tw-sl: 0
+        h_0_tw-tw: 0
+        h_sl-sl: [1, 1, 1.4, 1.4, 1.4, 1.4, 1.4]
+        h_sl-tw: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        h_tw-sl: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        h_tw-tw: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        atol_xi: 1.0
+        f_sat_sl_tw: 0 !< push-up factor for slip saturation due to twinning
+        c_1: 0
+        c_2: 0
+        c_3: 0
+        c_4: 0
+
+material:
+  - constituents:
+      - O: [0.24114792211095623, 0.16688609349631298, -0.6872542477553623, -0.6645888280744112]
+        phase: BCC_Ferrite
+        v: 1.0
+    homogenization: SX
+  - constituents:
+      - O: [0.04540452245714795, -0.04665825521506422, -0.7660648942364994, 0.6394575938865262]
+        phase: BCC_Martensite
+        v: 1.0
+    homogenization: SX

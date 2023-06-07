@@ -1,0 +1,14 @@
+# Petsc installation
+
+cd /scratch/project_2004956
+mkdir userspack
+cd userspack
+module --force purge
+export USER_SPACK_ROOT=/scratch/project_2004956/userSpack
+module load spack/v0.18-user
+user-spack-init
+spack install petsc@3.16.3+fftw+hdf
+
+  - you will get "include", "share" and "lib" folders of petsc in a directory
+    named like "/scratch/project_2004956/userSpack/install_tree/gcc-11.3.0/petsc-3.16.6-j5d3ke"
+

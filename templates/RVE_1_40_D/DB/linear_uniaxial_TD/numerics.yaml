@@ -1,0 +1,4 @@
+grid:
+  itmin: 2
+  itmax: 250
+  maxCutBack: 5

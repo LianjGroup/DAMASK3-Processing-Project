@@ -1,0 +1,62 @@
+[BCC_Ferrite]
+elasticity              hooke
+plasticity              phenopowerlaw
+lattice_structure       bcc
+Nslip                   12 12              # per family
+Ntwin                    0              # per family
+c11                     230.1e3
+c12                     134.6e3
+c44                     116.6e3
+gdot0_slip              0.001
+n_slip                  20
+tau0_slip               300.0 300.0      # per family
+tausat_slip             375.0 375.0        # per family
+gdot0_twin              0.001
+n_twin                  20
+tau0_twin               31.0          # per family
+s_pr                    0                        # push-up factor for slip saturation due to twinning
+twin_b                  0
+twin_c                  0
+twin_d                  0
+twin_e                  0
+h0_slipslip             3500.0
+h0_sliptwin             0
+h0_twinslip             0
+h0_twintwin             0
+interaction_slipslip    1 1 1.4 1.4 1.4 1.4
+interaction_sliptwin    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+interaction_twinslip    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+interaction_twintwin    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+a_slip                  1.3
+atol_resistance         1
+[BCC_Martensite]
+elasticity              hooke
+plasticity              phenopowerlaw
+lattice_structure       bcc
+Nslip                   12 12              # per family
+Ntwin                    0              # per family
+c11                     417.4e3
+c12                     242.4e3
+c44                     211.1e3
+gdot0_slip              0.001
+n_slip                  20
+tau0_slip               475.0 475.0      # per family
+tausat_slip             675.0 675.0        # per family
+gdot0_twin              0.001
+n_twin                  20
+tau0_twin               31.0          # per family
+s_pr                    0                        # push-up factor for slip saturation due to twinning
+twin_b                  0
+twin_c                  0
+twin_d                  0
+twin_e                  0
+h0_slipslip             11000.0
+h0_sliptwin             0
+h0_twinslip             0
+h0_twintwin             0
+interaction_slipslip    1 1 1.4 1.4 1.4 1.4
+interaction_sliptwin    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+interaction_twinslip    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+interaction_twintwin    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+a_slip                  0.8
+atol_resistance         1

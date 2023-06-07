@@ -1,0 +1,19 @@
+module --force purge
+module load gcc/11.3.0
+module load openmpi/4.1.4
+#module load netcdf-c/4.8.1
+module load hdf5/1.12.2-mpi
+module load fftw/3.3.10-mpi
+module load python-data/3.10-22.09
+
+# PETSC 3.16
+export PETSC_DIR=/scratch/project_2004956/userSpack/petsc-3.16.6-j5d3ke
+export PETSC_FC_INCLUDES=/scratch/project_2004956/userSpack/petsc-3.16.6-j5d3ke/include
+export LD_LIBRARY_PATH=/scratch/project_2004956/userSpack/petsc-3.16.6-j5d3ke/lib:$LD_LIBRARY_PATH
+
+export DAMASK_ROOT=/scratch/project_2004956/damask3/damask-3.0.0-alpha6
+
+export PATH=/scratch/project_2004956/damask3/damask3-install/bin:$PATH
+
+
+cmake -S damask-3.0.0-alpha6 -B build-grid -DDAMASK_SOLVER=grid -DCMAKE_INSTALL_PREFIX=/scratch/project_2004956/damask3/damask-3.0.0-alpha6
