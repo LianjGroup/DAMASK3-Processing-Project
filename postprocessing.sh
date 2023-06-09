@@ -30,5 +30,6 @@ export HDF5_USE_FILE_LOCKING=FALSE
 ### Creating DAMASK postprocessing folder
 mkdir -p $PWD/postProc
 
+export materialVTI=$(ls *.hdf5)
 ### Postprocessing results from the hdf5 output file
-python /projappl/project_2004956/damask-3.0.0-alpha7/processing/postprocessing.py $PWD/RVE_1_40_D_tensionX.hdf5 $PWD/postProc RVE_1_40_D
+python /projappl/project_2004956/damask-3.0.0-alpha7/processing/postprocessing.py $PWD ${materialVTI}

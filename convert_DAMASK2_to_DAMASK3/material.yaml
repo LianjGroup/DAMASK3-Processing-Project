@@ -10,7 +10,6 @@ phase:
       output: [F, P, F_p, F_e, L_p, O]
       elastic: {type: Hooke, C_11: 230100.0, C_12: 134600.0, C_44: 116600.0}
       plastic:
-        output: [rho_mob, rho_dip]
         type: phenopowerlaw
         N_sl: 12.0
         N_tw: 0.0
@@ -42,7 +41,6 @@ phase:
       output: [F, P, F_p, F_e, L_p, O]
       elastic: {type: Hooke, C_11: 417400.0, C_12: 242400.0, C_44: 211100.0}
       plastic:
-        output: [rho_mob, rho_dip]
         type: phenopowerlaw
         N_sl: 12.0
         N_tw: 0.0
