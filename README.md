@@ -1,5 +1,5 @@
 # DAMASK3-Processing-Project
-Author: Xuan Binh 春平
+Author: Xuan Binh 
 
 Stage 1: Convert your material.config file from DAMASK 2 to DAMASK 3
 
